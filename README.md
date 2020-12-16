@@ -17,12 +17,14 @@ Data is currently collected for song and user activities, in two directories: da
 
 # Schema
 open terminal and run: "psql -h 127.0.0.1 -d sparkifydb -U student"
+
 then in postgres db terminal run "\d+ _table_name_" to get the schema of that table
 
 
 ## Fact Table
 
 songplays - records in log data associated with song plays i.e. records with page NextSong
+
 songplay_id, 
 start_time,
 user_id, 
@@ -36,6 +38,7 @@ user_agent
 ## Dimension Tables
 
 users - users in the app
+
 user_id, 
 first_name, 
 last_name, 
@@ -43,6 +46,7 @@ gender,
 level
 
 songs - songs in music database
+
 song_id, 
 title, 
 artist_id, 
@@ -50,6 +54,7 @@ year,
 duration
 
 artists - artists in music database
+
 artist_id, 
 name, 
 location, 
@@ -57,6 +62,7 @@ latitude,
 longitude
 
 time - timestamps of records in songplays broken down into specific units
+
 start_time, 
 hour, 
 day, 
