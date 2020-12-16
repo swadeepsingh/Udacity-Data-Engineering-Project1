@@ -23,7 +23,7 @@ then in postgres db terminal run "\d+ _table_name_" to get the schema of that ta
 
 ## Fact Table
 
-songplays - records in log data associated with song plays i.e. records with page NextSong
+### songplays - records in log data associated with song plays i.e. records with page NextSong
 
 |   Column    |            Type             | Nullable |
 | ----------- | --------------------------- | -------- |
@@ -41,7 +41,7 @@ Primary key: songplay_id
 
 ## Dimension Tables
 
-users - users in the app
+### users - users in the app
 
 |   Column   |       Type        | Nullable |
 | ---------- | ----------------- | -------- |
@@ -53,7 +53,7 @@ users - users in the app
 
 Primary key: user_id
 
-songs - songs in music database
+### songs - songs in music database
 
 |  Column   |         Type          | Nullable |
 | --------- | --------------------- | -------- |
@@ -65,9 +65,7 @@ songs - songs in music database
 
 Primary key: song_id
 
-artists - artists in music database
-
-Artists in music database.
+### artists - artists in music database
 
 |  Column   |         Type          | Nullable |
 | --------- | --------------------- | -------- |
@@ -79,7 +77,7 @@ Artists in music database.
 
 Primary key: artist_id
 
-time - timestamps of records in songplays broken down into specific units
+### time - timestamps of records in songplays broken down into specific units
 
 |   Column   |            Type             | Nullable |
 | ---------- | --------------------------- | -------- |
