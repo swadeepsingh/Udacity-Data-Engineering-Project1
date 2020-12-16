@@ -25,51 +25,72 @@ then in postgres db terminal run "\d+ _table_name_" to get the schema of that ta
 
 songplays - records in log data associated with song plays i.e. records with page NextSong
 
-songplay_id, 
-start_time,
-user_id, 
-level, 
-song_id, 
-artist_id, 
-session_id, 
-location, 
-user_agent
+|   Column    |            Type             | Nullable |
+| ----------- | --------------------------- | -------- |
+| songplay_id | integer                     | not null |
+| start_time  | timestamp without time zone | not null |
+| user_id     | integer                     | not null |
+| level       | character varying           | not null |
+| song_id     | character varying(18)       |          |
+| artist_id   | character varying(18)       |          |
+| session_id  | integer                     | not null |
+| location    | character varying           | not null |
+| user_agent  | character varying           | not null |
+
+Primary key: songplay_id
 
 ## Dimension Tables
 
 users - users in the app
 
-user_id, 
-first_name, 
-last_name, 
-gender, 
-level
+|   Column   |       Type        | Nullable |
+| ---------- | ----------------- | -------- |
+| user_id    | integer           | not null |
+| first_name | character varying | not null |
+| last_name  | character varying | not null |
+| gender     | character(1)      | not null |
+| level      | character varying | not null |
+
+Primary key: user_id
 
 songs - songs in music database
 
-song_id, 
-title, 
-artist_id, 
-year, 
-duration
+|  Column   |         Type          | Nullable |
+| --------- | --------------------- | -------- |
+| song_id   | character varying(18) | not null |
+| title     | character varying     | not null |
+| artist_id | character varying(18) | not null |
+| year      | integer               | not null |
+| duration  | double precision      | not null |
+
+Primary key: song_id
 
 artists - artists in music database
 
-artist_id, 
-name, 
-location, 
-latitude, 
-longitude
+Artists in music database.
+
+|  Column   |         Type          | Nullable |
+| --------- | --------------------- | -------- |
+| artist_id | character varying(18) | not null |
+| name      | character varying     | not null |
+| location  | character varying     | not null |
+| latitude  | double precision      |          |
+| longitude | double precision      |          |
+
+Primary key: artist_id
 
 time - timestamps of records in songplays broken down into specific units
 
-start_time, 
-hour, 
-day, 
-week, 
-month, 
-year, 
-weekday
+|   Column   |            Type             | Nullable |
+| ---------- | --------------------------- | -------- |
+| start_time | timestamp without time zone | not null |
+| hour       | integer                     | not null |
+| day        | integer                     | not null |
+| week       | integer                     | not null |
+| month      | integer                     | not null |
+| year       | integer                     | not null |
+| weekday    | integer                     | not null |
+
 
 # Run
 
