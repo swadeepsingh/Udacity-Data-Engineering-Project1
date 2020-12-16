@@ -31,8 +31,8 @@ then in postgres db terminal run "\d+ _table_name_" to get the schema of that ta
 | start_time  | timestamp without time zone | not null |
 | user_id     | integer                     | not null |
 | level       | character varying           | not null |
-| song_id     | character varying(18)       |          |
-| artist_id   | character varying(18)       |          |
+| song_id     | character varying           |          |
+| artist_id   | character varying           |          |
 | session_id  | integer                     | not null |
 | location    | character varying           | not null |
 | user_agent  | character varying           | not null |
@@ -48,7 +48,7 @@ Primary key: songplay_id
 | user_id    | integer           | not null |
 | first_name | character varying | not null |
 | last_name  | character varying | not null |
-| gender     | character(1)      | not null |
+| gender     | character         | not null |
 | level      | character varying | not null |
 
 Primary key: user_id
@@ -57,9 +57,9 @@ Primary key: user_id
 
 |  Column   |         Type          | Nullable |
 | --------- | --------------------- | -------- |
-| song_id   | character varying(18) | not null |
+| song_id   | character varying     | not null |
 | title     | character varying     | not null |
-| artist_id | character varying(18) | not null |
+| artist_id | character varying     | not null |
 | year      | integer               | not null |
 | duration  | double precision      | not null |
 
@@ -69,7 +69,7 @@ Primary key: song_id
 
 |  Column   |         Type          | Nullable |
 | --------- | --------------------- | -------- |
-| artist_id | character varying(18) | not null |
+| artist_id | character varying     | not null |
 | name      | character varying     | not null |
 | location  | character varying     | not null |
 | latitude  | double precision      |          |
@@ -81,7 +81,7 @@ Primary key: artist_id
 
 |   Column   |            Type             | Nullable |
 | ---------- | --------------------------- | -------- |
-| start_time | timestamp without time zone | not null |
+| start_time | timestamp                   | not null |
 | hour       | integer                     | not null |
 | day        | integer                     | not null |
 | week       | integer                     | not null |
